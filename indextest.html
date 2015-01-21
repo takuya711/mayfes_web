@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<script src="./js/processing.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="./js/canvassetting.js"></script>
+<script type="application/processing" data-processing-target="pjs" >
+	int x1, y1, x2, y2;
+	int i, j;
+	int block = 20;
+	void setup() {
+		size(innerWidth, innerHeight);
+		frameRate(6);
+	}
+
+	void draw(){
+		size(innerWidth, innerHeight);
+		graphPaper();
+		stroke(255,100,0);
+		line(mouseX,0,mouseX,height);
+		line(0,mouseY,width,mouseY);
+		for (j=0; j<3; j++) {
+			y1=int(random(1)*height*5/6+height/12);
+			x1=0;
+			stroke(0, 255, 0);
+			for (i=0; i<width/15+1; i++) {
+				x2=i*15;
+				y2=int(customRandom()*height*5/6+height*(j/2)/20);
+				line(x1, y1, x2, y2);
+				x1=x2;
+				y1=y2;
+			}
+		}
+
+	}
+
+	void graphPaper(){
+		background(0, 0, 0);
+		for(i=0; i<width/block; i++){
+			stroke(50);
+			line(i*block,0,i*block,height);
+		}
+		for(i=0; i<height/block; i++){
+			stroke(50);
+			line(0,i*block,width,i*block); 
+		}
+	}
+
+	float customRandom() {
+		float retValue = 1- pow(random(1), 5);
+		return retValue;
+	}
+</script>
+<script type="text/javascript" src="./js/excanvas.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="wrapper">
+<canvas id="pjs"/></canvas>
+</div>
+<header id="header" class="container">
+			<div class="row">
+				<div class="col-sm-1 col-md-2 col-lg-1 col-md-offset-1 col-lg-offset-2 hidden-xs" id="eeic_logo">
+					<a href="./index.html"><img src="./images/eeic_logo_digit_medium.gif"></a>
+				</div>
+				<div class="col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-8">
+					<div class="row">
+						<div id="eeic_header" class="col-sm-3 hidden-xs">
+							<a href="./index.html"><img src="./images/eeic_header3.gif" alt="EEIC"></a>
+						</div>
+						<div id="eeic_header" class="col-xs-12 hidden-sm hidden-md hidden-lg">
+							<a href="./index.html"><img src="./images/eeic_header3_sm.gif" alt="EEIC"></a>
+						</div>
+						<!--<div class="col-sm-2 col-sm-offset-2 hidden-xs " id="header_title"><img src="./images/header_title.png" alt="EEIC"></div>-->
+					</div>
+					<div id="navbar" class="row col-lg-9 col-md-10 col-sm-11 hidden-xs">
+						<a href="#"><img src="./images/exhibition.gif" alt="展示"></a>
+						<a href="#"><img src="./images/workshop.gif" alt="ワークショップ"></a>
+						<a href="#"><img src="./images/access.gif" alt="アクセス"></a>
+						<a href="#"><img src="./images/others_animation.gif" alt="その他"></a>
+					</div>
+					<div id="navbar-xs" class="hidden-sm hidden-md hidden-lg">
+						<div class="col-xs-6">
+							<a href="#"><img src="./images/exhibition-xs.gif" alt="展示"></a>
+						</div>
+						<div class="col-xs-6">
+							<a href="#"><img src="./images/workshop-xs.gif" alt="ワークショップ"></a>
+						</div>
+						<div class="col-xs-6">
+							<a href="#"><img src="./images/access-xs.gif" alt="アクセス"></a>
+						</div>
+						<div class="col-xs-6">						
+							<a href="#"><img src="./images/others-xs.gif" alt="その他"></a>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</header>
+		
+</body>
+</html>

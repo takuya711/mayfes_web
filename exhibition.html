@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>eeic</title>
+
+	<script src="./js/processing.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/canvassetting.js"></script>
+	<script type="application/processing" data-processing-target="pjs" >
+		int block = 20;
+		int blockWidth;
+		int blockHeight;
+		int timer = 0;
+		int maxX,maxY;
+		int i,j;
+		float zeroWidth=0.6;
+		float zeroHeight = 0.7;
+		float oneHeight=0.7;
+
+		void setup() {
+			size(innerWidth, innerHeight);
+			frameRate(5);
+			strokeJoin(ROUND);
+		}
+
+		void draw(){
+			size(innerWidth, innerHeight);
+			graphPaper();
+			boldness=int(blockHeight*0.05)
+			blockHeight = int(innerHeight/5);
+			blockWidth = int(blockHeight*0.65);
+			maxX=int(innerWidth/blockWidth)+1;
+			maxY=int(innerHeight/blockHeight)+2;
+
+			drawNum();
+			if(timer >= blockHeight){
+				timer=0;
+			}
+			else{
+				timer += 20;
+			}
+		}
+
+		void drawNum(){
+			for(i=0; i<maxX; i++){
+				for(j=0; j<maxY; j++){
+					if(random(2)>1){
+						drawZero();
+					}
+					else{
+						drawOne();
+					}
+				}
+			}
+		}
+
+		void drawZero(){
+			noFill();
+			strokeWeight(boldness);
+			stroke(0,30+random(55),0);
+			rect((i+(1-zeroWidth)/2)*blockWidth, (j + (1 - zeroHeight)/2)*blockHeight - timer, zeroWidth*blockWidth, zeroHeight*blockHeight);
+		}
+
+		void drawOne(){
+			strokeWeight(boldness);
+			stroke(0,30+random(55),0);
+			line((i+0.5)*blockWidth, (j + (1 - oneHeight)/2)*blockHeight - timer, (i+0.5)*blockWidth, (j + 1 - (1 - oneHeight)/2)*blockHeight - timer);
+		}
+
+		void graphPaper(){
+			background(0, 0, 0);
+			strokeWeight(1);
+			stroke(50);
+			for(i=0; i<width/block; i++){
+				line(i*block,0,i*block,height);
+			}
+			for(i=0; i<height/block; i++){
+				line(0,i*block,width,i*block); 
+			}
+		}
+
+		float customRandom() {
+			float retValue = 1- pow(random(1), 5);
+			return retValue;
+		}
+
+	</script>
+	<script type="text/javascript" src="./js/excanvas.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+
+		<canvas id="pjs"/></canvas>
+
+	</div>
+	<!-- Header -->
+	<canvas id="main"></canvas>
+	<header id="header" class="container">
+		<div class="row">
+			<div class="col-sm-1 col-md-2 col-lg-1 col-md-offset-1 col-lg-offset-2 hidden-xs" id="eeic_logo">
+				<a href="./index.html"><img src="./images/eeic_logo_digit_medium.gif"></a>
+			</div>
+			<div class="col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-8">
+				<div class="row">
+					<div id="eeic_header" class="col-sm-3 hidden-xs">
+						<a href="./index.html"><img src="./images/eeic_header3.gif" alt="EEIC"></a>
+					</div>
+					<div id="eeic_header" class="col-xs-12 hidden-sm hidden-md hidden-lg">
+						<a href="./index.html"><img src="./images/eeic_header3_sm.gif" alt="EEIC"></a>
+					</div>
+					<!--<div class="col-sm-2 col-sm-offset-2 hidden-xs " id="header_title"><img src="./images/header_title.png" alt="EEIC"></div>-->
+				</div>
+				<div id="navbar" class="row col-lg-9 col-md-10 col-sm-11 hidden-xs">
+					<a href="./exhibition.html"><img src="./images/exhibition_animation.gif" alt="展示"></a>
+					<a href="#"><img src="./images/workshop.gif" alt="ワークショップ"></a>
+					<a href="#"><img src="./images/access.gif" alt="アクセス"></a>
+					<a href="./others.html"><img src="./images/others.gif" alt="その他"></a>
+				</div>
+				<div id="navbar-xs" class="hidden-sm hidden-md hidden-lg">
+					<div class="col-xs-6">
+						<a href="./exhibition.html"><img src="./images/exhibition-xs.gif" alt="展示"></a>
+					</div>
+					<div class="col-xs-6">
+						<a href="#"><img src="./images/workshop-xs.gif" alt="ワークショップ"></a>
+					</div>
+					<div class="col-xs-6">
+						<a href="#"><img src="./images/access-xs.gif" alt="アクセス"></a>
+					</div>
+					<div class="col-xs-6">						
+						<a href="./others.html"><img src="./images/others-xs.gif" alt="その他"></a>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+
+	</div>
+	<footer id="footer">
+		Copyright (c) EEIC五月祭展示「近未来体験2015」All rights reserved.　　
+	</footer>
+</body>
+</html>

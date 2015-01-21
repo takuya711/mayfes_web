@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>eeic</title>
+
+	<script src="./js/processing.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/canvassetting.js"></script>
+	<script type="application/processing" data-processing-target="pjs" >
+		int x1, y1, x2, y2;
+		int i, j;
+		int k = 100;
+		int timer = 0;
+		int flag=0;
+		int block = 20;
+		int waveNum = 2;
+		float randomWaveHeight = 0.82;
+		float randomWavePriOffset = 0.05;
+		float randomWaveSecOffset = 0.05;
+		int randomWaveSampling = 15;
+
+		void setup() {
+			size(innerWidth, innerHeight);
+			frameRate(3);
+		}
+
+		void draw(){
+			size(innerWidth, innerHeight);
+			graphPaper();
+
+			if (flag==0) {
+				makeRandomWave();
+				timer++;
+			}
+			flag=0;
+		}
+		
+		void mousePressed(){
+			if(timer>3){
+				frameRate(1);
+				makeSin();
+				frameRate(3);
+				timer += 12;
+				if(timer>500){
+					timer=0;
+				}
+			}
+		}
+
+		void makeSin(){
+			graphPaper();
+			stroke(255,100,0);
+			strokeWeight(1);
+			line(0,0.4*height,width,0.4*height);
+			for (j=1; j<3; j++) {
+				y1=int((sin((k/2)*j/10)+1.3)*height*0.40);;
+				x1=0;
+				stroke(0, 255, 0);
+				strokeWeight(5);
+				for (i=0; i<width/5+1; i++) {
+					x2=i*5;
+					y2=int((sin((i+k/2)*j/15)+1.3)*height*0.40);
+					line(x1, y1, x2, y2);
+					x1=x2;
+					y1=y2;
+				}
+
+			}
+			flag=1;
+		}
+
+		void makeRandomWave(){
+			for (j=0; j<waveNum; j++) {
+				y1=int((customRandom()*randomWaveHeight+randomWavePriOffset)*height);
+				x1=0;
+				stroke(0, 200, 0);
+				strokeWeight(1);
+				for (i=0; i<width/randomWaveSampling+1; i++) {
+					x2=i*randomWaveSampling;
+					y2=int((customRandom()*randomWaveHeight+j*randomWaveSecOffset+randomWavePriOffset)*height);
+					line(x1, y1, x2, y2);
+					x1=x2;
+					y1=y2;
+				}
+			}
+
+		}
+
+		void graphPaper(){
+			background(0, 0, 0);
+			strokeWeight(1);
+			stroke(50);
+			for(i=0; i<width/block; i++){
+				line(i*block,0,i*block,height);
+			}
+			for(i=0; i<height/block; i++){
+				line(0,i*block,width,i*block); 
+			}
+		}
+
+		float customRandom() {
+			float retValue = 1- pow(random(1), 5);
+			return retValue;
+		}
+
+		void cursorOsi(){
+			strokeWeight(1);
+			stroke(255,0,0);
+			line(mouseY, 0, mouseY, height);
+			line((mouseY+mouseX/8)*3,0,(mouseY+mouseX/8)*3,height);
+			line(0,mouseX*0.5+mouseY/10,width,mouseX*0.5+mouseY/10);
+			line(0,mouseX*1+mouseY/15,width,mouseX*1+mouseY/15);
+			strokeWeight(1);
+		}
+
+	</script>
+	<script type="text/javascript" src="./js/excanvas.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+
+		<canvas id="pjs"/></canvas>
+
+	</div>
+	<!-- Header -->
+	<canvas id="main"></canvas>
+	<header id="header" class="container">
+		<div class="row">
+			<div class="col-sm-1 col-md-2 col-lg-1 col-md-offset-1 col-lg-offset-2 hidden-xs" id="eeic_logo">
+				<a href="./index.html"><img src="./images/eeic_logo_digit_medium.gif"></a>
+			</div>
+			<div class="col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-8">
+				<div class="row">
+					<div id="eeic_header" class="col-sm-3 hidden-xs">
+						<a href="./index.html"><img src="./images/eeic_header3.gif" alt="EEIC"></a>
+					</div>
+					<div id="eeic_header" class="col-xs-12 hidden-sm hidden-md hidden-lg">
+						<a href="./index.html"><img src="./images/eeic_header3_sm.gif" alt="EEIC"></a>
+					</div>
+					<!--<div class="col-sm-2 col-sm-offset-2 hidden-xs " id="header_title"><img src="./images/header_title.png" alt="EEIC"></div>-->
+				</div>
+				<div id="navbar" class="row col-lg-9 col-md-10 col-sm-11 hidden-xs">
+					<a href="./exhibition.html"><img src="./images/exhibition.gif" alt="展示"></a>
+					<a href="#"><img src="./images/workshop.gif" alt="ワークショップ"></a>
+					<a href="#"><img src="./images/access.gif" alt="アクセス"></a>
+					<a href="./others.html"><img src="./images/others.gif" alt="その他"></a>
+				</div>
+				<div id="navbar-xs" class="hidden-sm hidden-md hidden-lg">
+					<div class="col-xs-6">
+						<a href="./exhibition.html"><img src="./images/exhibition-xs.gif" alt="展示"></a>
+					</div>
+					<div class="col-xs-6">
+						<a href="#"><img src="./images/workshop-xs.gif" alt="ワークショップ"></a>
+					</div>
+					<div class="col-xs-6">
+						<a href="#"><img src="./images/access-xs.gif" alt="アクセス"></a>
+					</div>
+					<div class="col-xs-6">						
+						<a href="#"><img src="./images/others-xs.gif" alt="その他"></a>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="carousel slide col-md-4 col-md-offset-2 hidden-xs">
+		</div>
+		<div class="col-sm-3">
+			<div class="hidden-xs"><p><iframe width="270" height="170" src="http://www.youtube.com/embed/W8JT9LAzNfU?feature=player_embedded" frameborder="0" allowfullscreen></iframe></p>
+			</div>
+			<div class="hidden-md hidden-sm hidden-lg"><p><iframe width="240" height="150" src="http://www.youtube.com/embed/W8JT9LAzNfU?feature=player_embedded" frameborder="0" allowfullscreen></iframe></p>
+			</div>
+			<div id="mayfes-day">
+				5月某日<br>
+				東京大学五月祭<br>
+				東京大学本郷キャンパスにて開催
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+		Copyright (c) EEIC五月祭展示「近未来体験2015」All rights reserved.　　
+	</footer>
+</body>
+</html>
