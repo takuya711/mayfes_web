@@ -30,7 +30,7 @@
 }
 
 #buttons_mobile img{
-    width:27%;
+    width:32%;
 }
 
 #eeic_logo{
@@ -63,13 +63,13 @@
 
 html,body{
 	height: 100%;
-    background-color: black;
 }
 
 body{
 	margin: 0px;
 	padding: 0px;
 	position: relative;
+    background-color: #000;
 }
 
 #wrap{
@@ -112,7 +112,7 @@ body #wrapper{
     vertical-align: middle;
     text-align: center;
     position: fixed;
-    font-size: 75%;
+    font-size: 73%;
 }
 
 *:focus{
