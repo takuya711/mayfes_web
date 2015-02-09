@@ -1,4 +1,14 @@
-#header{
+#header_normal{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0,100,0, 0.60);
+	background-size: 100% 100%;
+	top: 0;
+}
+
+#header_mobile{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	position: absolute;
@@ -6,42 +16,55 @@
 	background-color: rgba(0,100,0, 0.60);
 	background-size: 100% 100%;
 	top: 0;
-	cursor: url(../images/eeic_logo.png);
-
-}
-
-#eeic_header{
-	padding-left: 25px;
-}
-
-#eeic_logo{
-	text-align: right;
-}
-
-#header_title{
-	padding-left: 30px;
+    text-align: center;
 }
 
 #navbar{
-	padding-top: 10px;
-	text-align: left;
-}
-#navbar-xs{
-	padding-top: 5px;
-	text-align: center;
+    width:700px;
+    height:120px;
+    margin: 0 auto;
 }
 
-#mayfes-day{
-	background-color: rgba(255,0,0,0.9);
-	color: rgb(0,0,0);
-	font-family: meiryo;
-	font-weight: bold;
+#banner_mobile img{
+    width:90%;
 }
 
-
-#item1{
-	width: 100%;
+#buttons_mobile img{
+    width:27%;
 }
+
+.button_mobile_left img{
+    text-align:right;
+}
+
+#eeic_logo{
+    width:100px;
+    height:120px;
+    float:left;
+}
+
+#panel{
+    width:506px;
+    height:120px;
+    float:left;
+    text-align:center;
+}
+
+#banner{
+    width:548px;
+    height:76px;
+}
+
+#buttons{
+    padding-top:5px;
+    width:548px;
+    height:35px;
+}
+
+.clear{
+    clear:both;
+}
+
 html,body{
 	height: 100%;
 }
