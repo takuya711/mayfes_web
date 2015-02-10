@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EEIC五月祭「近未来体験2015」</title>
+    <meta name="keyword" content="五月祭,EEIC,電子情報工学科,電気電子工学科,東大">
+    <meta name="description" content="東京大学工学部電子情報工学科・電気電子工学科の学生による五月祭での展示「近未来体験2015」の特設ページです">
+    <link rel="shortcut icon" href="images/bulb.ico">
+	<script src="./js/processing.min.js"></script>
+	<script src="./js/canvassetting.js"></script>
+	<script type="application/processing" data-processing-target="pjs" src="processing/radiotower.pde"></script>
+	<script type="text/javascript" src="./js/excanvas.js"></script>
+	<script src="./js/jquery-1.11.2.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/resetbootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="pjs"/></canvas>
+    </div>
+    <!-- Header -->
+    <canvas id="main"></canvas>
+    <header id="header">
+        <div id="header_normal" class="hidden-xs">
+            <div id="navbar">
+                <div id="eeic_logo">
+                    <a href="./index.html"><img src="./images/eeic_logo_digit_medium.gif" hspace="1" vspace="1" alt="logo"></a>
+                </div>
+                <div id="panel">
+                    <div id="banner">
+                        <a href="./index.html"><img src="./images/header_logo.png" hspace="1" vspace="1" alt="logo"></a>
+                    </div>
+                    <div id="buttons">
+                        <a href="./exhibition.html"><img src="./images/exhibition_light.png" class="nonactive" hspace="1" vspace="1" alt="展示"></a>
+                        <a href="./workshop.html"><img src="./images/workshop_light.png" class="nonactive" hspace="1" vspace="1" alt="ワークショップ"></a>
+                        <a href="./access.html"><img src="./images/access_light.png" class="active" hspace="1" vspace="1" alt="アクセス"></a>
+                        <a href="./others.html"><img src="./images/others_light.png" class="nonactive" hspace="1" vspace="1" alt="その他"></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="header_mobile" class="hidden-sm hidden-md hidden-lg">
+            <div id="navbar_mobile">
+                <div id="banner_mobile">
+                    <a href="./index.html"><img src="./images/header_logo.png" hspace="1" vspace="2" alt="logo"></a>
+                </div>
+            </div>
+            <div id="buttons_mobile">
+                <a href="./exhibition.html"><img src="./images/exhibition_light.png" class="nonactive" hspace="25" vspace="3" alt="展示"></a>
+                <a href="./workshop.html"><img src="./images/workshop_light.png" class="nonactive" hspace="25" vspace="3" alt="ワークショップ"></a>
+                <a href="./access.html"><img src="./images/access_light.png" class="active" hspace="25" vspace="3" alt="アクセス"></a>
+                <a href="./others.html"><img src="./images/others_light.png" class="nonactive" hspace="25" vspace="3" alt="その他"></a>
+            </div>				
+        </div>
+    </header>
+    <div id="contents" class="container">
+            <div class="col-md-2 col-sm-1 hidden-xs"></div>
+            <div class="col-md-8 col-sm-10 col-xs-12">
+
+                <div id="map">
+                    <h2>アクセス</h2>
+                    <p>五月祭での電子情報工学科・電気電子工学科の展示は、東京大学本郷キャンパスの工学部2号館・3号館・13号館で行います。</p>
+                    <h3>本郷キャンパスへのアクセス</h3>
+                    <dl>
+                        <dt>住所</dt>
+                        <dd>〒113-8656 東京都文京区本郷 7-3-1</dd>
+                        <dt>最寄り駅</dt>
+                        <dd>地下鉄千代田線 根津駅</dd>
+                        <dd>地下鉄南北線 東大前駅</dd>
+                        <dd>地下鉄大江戸線 本郷三丁目駅</dd>
+                        <dd>地下鉄丸の内線 本郷三丁目駅</dd>
+                        <dt>地図</dt>
+                        <dd><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.7403032498237!2d139.76182144999999!3d35.71439699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c31cc282f99%3A0x3d9424d7feac6c9f!2z77yX5LiB55uu77yTIOW3peWtpumDqOaWsO-8kuWPt-mkqA!5e0!3m2!1sja!2sjp!4v1395712859580" style="width:100%;" height="500"></iframe></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-sm-1 col-md-2 hidden-xs"></div>
+    </div>
+    <footer id="footer">
+        <div id="footer_normal" class="hidden-xs">
+            Copyright (c) EEIC五月祭展示「近未来体験2015」All rights reserved.　　
+        </div>
+        <div id="footer_mobile" class="hidden-sm hidden-md hidden-lg">
+            Copyright (c) EEIC五月祭展示「近未来体験2015」All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

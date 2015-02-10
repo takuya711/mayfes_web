@@ -49,13 +49,13 @@ void drawNum(){
 void drawZero(){
 	noFill();
 	strokeWeight(boldness);
-	stroke(0,30+random(55),0);
+	stroke(0,20+random(40),0);
 	rect((i+(1-zeroWidth)/2)*blockWidth, (j + (1 - zeroHeight)/2)*blockHeight - timer, zeroWidth*blockWidth, zeroHeight*blockHeight);
 }
 
 void drawOne(){
 	strokeWeight(boldness);
-	stroke(0,30+random(55),0);
+	stroke(0,20+random(40),0);
 	line((i+0.5)*blockWidth, (j + (1 - oneHeight)/2)*blockHeight - timer, (i+0.5)*blockWidth, (j + 1 - (1 - oneHeight)/2)*blockHeight - timer);
 }
 

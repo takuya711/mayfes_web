@@ -5,7 +5,7 @@ int block=20;
 int waveLimit = 20;
 float towerHeight = 0.45;
 float towerWidth = 0.02;
-float towerStartX = 0.1;
+float towerStartX = 0.05;
 int waveSpeed = (int)(innerWidth/8);
 Wave[] Waves1 = new Wave[waveLimit];
 Wave[] Waves2 = new Wave[waveLimit];
@@ -77,7 +77,7 @@ class Wave {
 	void update() {
 		if (flag==1) {
 			strokeWeight(2);
-			stroke(random(120), 120, random(120));
+			stroke(random(60), 60, random(60));
 			noFill();
 			ellipse(xPos, yPos, (timer - genTime)*waveSpeed, (timer - genTime)*waveSpeed);
 		}

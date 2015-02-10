@@ -1,13 +1,49 @@
+/*header for PC*/
 #header_normal{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	position: fixed;
 	width: 100%;
 	background-color: rgba(0,100,0, 0.60);
-	background-size: 100% 100%;
+	/*background-size: 100% 100%;*/
 	top: 0;
+    z-index:5;
+    /*background-image: url(../images/randomtile.png);
+    background-repeat: repeat;*/
+}
+#navbar{
+    width:700px;
+    height:120px;
+    margin: 0 auto;
+}
+#eeic_logo{
+    width:100px;
+    height:120px;
+    float:left;
+}
+#panel{
+    width:506px;
+    height:120px;
+    float:left;
+    text-align:center;
+}
+#banner{
+    width:548px;
+    height:76px;
+}
+#buttons{
+    padding-top:5px;
+    width:548px;
+    height:35px;
+}
+.nonactive{
+    background-color: rgba(10,10,10,0.5);
+}
+.active{
+    background-color: rgba(0,150,0, 0.5);
 }
 
+/*header for mobile*/
 #header_mobile{
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -17,83 +53,16 @@
 	background-size: 100% 100%;
 	top: 0;
     text-align: center;
+    z-index:5;
 }
-
-#navbar{
-    width:700px;
-    height:120px;
-    margin: 0 auto;
-}
-
-#banner_mobile img{
-    width:90%;
-}
-
+#banner_mobile img{width:90%;}
 #buttons_mobile img{
     width:32%;
     max-height:35px;
 }
 
-#eeic_logo{
-    width:100px;
-    height:120px;
-    float:left;
-}
 
-#panel{
-    width:506px;
-    height:120px;
-    float:left;
-    text-align:center;
-}
-
-#banner{
-    width:548px;
-    height:76px;
-}
-
-#buttons{
-    padding-top:5px;
-    width:548px;
-    height:35px;
-}
-
-.clear{
-    clear:both;
-}
-
-html,body{
-	height: 100%;
-}
-
-body{
-	margin: 0px;
-	padding: 0px;
-	position: relative;
-    background-color: #000;
-}
-
-#wrap{
-	width: 100%;
-	position: absolute;
-	height:auto !important; /*IE6対策*/
-	height: 100%; /*IE6対策*/
-	min-height: 100%;
-}
-
-body #wrapper{
-	width: 100%;
-	position: fixed;
-	height: 100%;
-}
-
-#contents{
-	padding-bottom:22px; /*フッターの高さと同じ*/
-}
-
-#footer{
-}
-
+/*footer*/
 #footer_normal{
     background-color: rgba(0,100,0, 0.60);
     color: rgb(0,255,0);
@@ -102,8 +71,8 @@ body #wrapper{
     bottom: 0;
     text-align: right;
     position: fixed;
+    z-index:5;
 }
-
 #footer_mobile{
     background-color: rgba(0,100,0, 0.60);
     color: rgb(0,255,0);
@@ -114,8 +83,92 @@ body #wrapper{
     text-align: center;
     position: fixed;
     font-size: 73%;
+    z-index:5;
 }
 
-*:focus{
-    outline:none;
+
+/*default settings*/
+body #wrapper{/*for canvas*/
+	width: 100%;
+	position: fixed;
+	height: 100%;
+}
+*:focus{outline:none;}
+
+
+/*index settings*/
+#mayfes-date{
+    background-color: rgba(20,20,20,0.6);
+	background-size: 100% 100%;
+    padding: 5px;
+    margin: 0px 10px 5px 0px;
+    color: rgb(220,220,220);
+    border-style: solid;
+    border-color: rgba(80,80,80,0.6)   
+}
+#top-content{
+	background-size: 100% 100%;
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+}
+#top-content img{ width:100%;}
+.vice-top{
+    background-color: rgba(20,20,20,0.6);
+	background-size: 100% 100%;
+    margin:5px 0px 5px 0px;
+    padding: 5px;
+    color: rgb(220,220,220);
+    border-style: solid;
+    border-color: rgba(80,80,80,0.6)   
+}
+p.resizeimage img {width: 100%;}
+
+.vice-top ul{
+  display:block;
+  padding-left:30px;
+}
+.vice-top li{
+  display:inline-block;
+  font-size:13px;
+  width:190px;
+}
+#contents{
+    padding-bottom:32px;
+}
+#facebook{
+    overflow:hidden;
+    width:100%;
+    height:620px;
+    background-color: rgba(230,230,230,0.8);
+    margin-left:10px;
+}
+
+
+/*for access*/
+#map{
+    background-color: rgba(20,20,20,0.6);
+	background-size: 100% 100%;
+    padding:20px;
+    margin:20px;
+    color: rgb(220,220,220);
+    border-style: solid;
+    border-color: rgba(80,80,80,0.6)   
+}
+
+
+/*clear float*/
+.clear{clear:both;}
+
+
+
+/*setting for something*/
+html,body{
+	height: 100%;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+    background-color: #000;
 }

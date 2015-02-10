@@ -27,8 +27,8 @@ void makeRandomWave(){
 	for (j=0; j<waveNum; j++) {
 		y1=int((customRandom()*randomWaveHeight+randomWavePriOffset)*height);
 		x1=0;
-		stroke(0, 200, 0);
-		strokeWeight(1);
+		stroke(random(80), 80, random(80));
+		strokeWeight(1.5);
 		for (i=0; i<width/randomWaveSampling+1; i++) {
 			x2=i*randomWaveSampling;
 			y2=int((customRandom()*randomWaveHeight+j*randomWaveSecOffset+randomWavePriOffset)*height);
