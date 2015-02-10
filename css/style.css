@@ -101,7 +101,7 @@
     bottom: 0;
     vertical-align: middle;
     text-align: center;
-    position: fixed;
+    position: absolute;
     font-size: 73%;
     z-index:5;
 }
@@ -169,6 +169,11 @@ p.resizeimage img {width: 100%;}
     color: rgb(220,220,220);
     border-style: solid;
     border-color: rgba(80,80,80,0.6)   
+}
+#past-web img{
+    width:100%;
+    background-color:rgba(255,255,255,0.9);
+    padding: 5px 0px 5px 0px;
 }
 
 /*for access*/
