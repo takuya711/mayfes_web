@@ -44,11 +44,10 @@
 #header_mobile{
 	padding-top: 5px;
 	padding-bottom: 5px;
-    margin-bottom: 20px;
 	position: absolute;
 	width: 100%;
 	background-color: rgba(0,100,0, 0.60);
-	background-size: 100% 100%;
+	/*background-size: 100% 100%;*/
 	top: 0;
     text-align: center;
     z-index:5;
