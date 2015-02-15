@@ -1,3 +1,9 @@
+(function () {
+    if (getDevice=='sp' || getDevice=='tab'){
+        document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/digits.pde"></canvas>';
+    }
+});
+
 /**
  *  ユーザーのデバイスを返す
  *  
@@ -15,7 +21,3 @@ var getDevice = (function(){
     }
 })();
 
-if (getDevice=='sp' || getDevice=='tab'){
-    document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/digits.pde"></canvas>';
-
-}
