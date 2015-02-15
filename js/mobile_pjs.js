@@ -16,5 +16,6 @@ var getDevice = (function(){
 })();
 
 if (getDevice=='sp' || getDevice=='tab'){
-    document.getElementById('pjs').innerHTML = '<canvas data-src="./processing/digits.pde"></canvas>'; 
+    document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/digits.pde"></canvas>';
+
 }
