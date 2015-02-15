@@ -1,4 +1,4 @@
-(function () {
+$(function () {
 	sizing();
 	$(window).resize(function() {
 		sizing();
