@@ -1,6 +1,6 @@
 $(function () {
     if (getDevice=='sp' || getDevice=='tab'){
-        document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/mobile_digits.pde"></canvas>';
+        document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/mobile_digits.pjs"></canvas>';
     }
 });
 
