@@ -19,7 +19,7 @@ void draw(){
 	size(innerWidth, innerHeight);
 	graphPaper();
 	boldness=int(blockHeight*0.05)
-	blockHeight = int(innerHeight/3);
+	blockHeight = int(innerHeight/4);
 	blockWidth = int(blockHeight*0.65);
 	maxX=int(innerWidth/blockWidth)+1;
 	maxY=int(innerHeight/blockHeight)+2;
