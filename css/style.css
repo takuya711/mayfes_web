@@ -155,9 +155,14 @@ p.resizeimage img {width: 100%;}
   width:190px;
 }
 .info{
-    padding: 0px 25px 5px 25px;
+    padding: 0 5% 3% 5%;
     font-weight: bold;
 }
+
+.normal{
+    padding: 0 5% 0 5%;
+}
+
 #contents{
     padding-bottom:32px;
 }
@@ -183,14 +188,14 @@ p.resizeimage img {width: 100%;}
 /*for access*/
 #map{
     background-size: 100% 100%;
-    padding:10px;
+    padding:3% 5% 5% 5%;
     margin:30px;
 }
 
 /*for exhibition*/
 #lab{
     background-size: 100% 100%;
-    padding:5% 5% 5% 5%;
+    padding:3% 5% 5% 5%;
     margin:30px;
 }
 
