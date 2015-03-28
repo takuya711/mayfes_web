@@ -154,6 +154,10 @@ p.resizeimage img {width: 100%;}
   font-size:13px;
   width:190px;
 }
+.info{
+    padding: 0px 25px 5px 25px;
+    font-weight: bold;
+}
 #contents{
     padding-bottom:32px;
 }
@@ -182,6 +186,14 @@ p.resizeimage img {width: 100%;}
     padding:10px;
     margin:30px;
 }
+
+/*for exhibition*/
+#lab{
+    background-size: 100% 100%;
+    padding:10px;
+    margin:30px;
+}
+
 
 
 /*clear float*/

@@ -4,9 +4,11 @@ int blockHeight;
 int timer = 0;
 int maxX,maxY;
 int i,j;
+int time = 0;
 float zeroWidth=0.6;
 float zeroHeight = 0.7;
 float oneHeight=0.7;
+int timelimit = 15;
 
 void setup() {
 	size(innerWidth, innerHeight);
@@ -16,21 +18,24 @@ void setup() {
 }
 
 void draw(){
-	size(innerWidth, innerHeight);
-	graphPaper();
-	boldness=int(blockHeight*0.05)
-	blockHeight = int(innerHeight/4);
-	blockWidth = int(blockHeight*0.65);
-	maxX=int(innerWidth/blockWidth)+1;
-	maxY=int(innerHeight/blockHeight)+2;
+    if(time < timelimit){ 
+        size(innerWidth, innerHeight);
+        graphPaper();
+        boldness=int(blockHeight*0.05)
+            blockHeight = int(innerHeight/4);
+        blockWidth = int(blockHeight*0.65);
+        maxX=int(innerWidth/blockWidth)+1;
+        maxY=int(innerHeight/blockHeight)+2;
 
-	drawNum();
-	if(timer >= blockHeight){
-		timer=0;
-	}
-	else{
-		timer += 20;
-	}
+        drawNum();
+        if(timer >= blockHeight){
+            timer=0;
+        }
+        else{
+            timer += 20;
+        }
+    time++;
+    }
 }
 
 void drawNum(){
