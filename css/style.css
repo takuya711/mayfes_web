@@ -199,7 +199,35 @@ p.resizeimage img {width: 100%;}
     margin:30px;
 }
 
+.lablist{
+    padding:5% 5% 1% 5%;
+    margin-bottom:5%;
+/*    font-size: 80%;*/
+}
+.lablist img{
+    width: 100%;
+}
 
+.gray{
+    background-color: rgba(180,180,180,0.6);
+    color: black;
+}
+
+
+.red{
+    background-color: rgba(200,50,50,0.6);
+    color: black;
+}
+
+.blue{
+    background-color: rgba(30,180,230,0.6);
+    color: black;
+}
+
+.green{
+    background-color: rgba(0,180,0,0.6);
+    color: black;
+}
 
 /*clear float*/
 .clear{clear:both;}
