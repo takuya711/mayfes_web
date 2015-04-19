@@ -201,7 +201,8 @@ p.resizeimage img {width: 100%;}
 
 .lablist{
     padding:5% 5% 1% 5%;
-    margin-bottom:5%;
+    margin:2% 2% 4.5% 2%;
+    color: rgba(220,220,220,0.9);
 /*    font-size: 80%;*/
 }
 .lablist img{
@@ -209,24 +210,20 @@ p.resizeimage img {width: 100%;}
 }
 
 .gray{
-    background-color: rgba(180,180,180,0.6);
-    color: black;
+    background-color: rgba(50,50,50,1);
 }
 
 
 .red{
-    background-color: rgba(200,50,50,0.6);
-    color: black;
+    background-color: rgba(130,40,40,1);
 }
 
 .blue{
-    background-color: rgba(30,180,230,0.6);
-    color: black;
+    background-color: rgba(20,90,110,1);
 }
 
 .green{
-    background-color: rgba(0,180,0,0.6);
-    color: black;
+    background-color: rgba(10,100,20,1);
 }
 
 /*clear float*/
