@@ -126,6 +126,11 @@ body #wrapper{/*for canvas*/
     margin: 0px 10px 5px 0px;
 }
 .responsive-image{max-width: 100%;}
+.responsive-map{
+    height: auto;
+    width:400px;
+    max-width: 100%;
+}
 .border-box{
     background-color: rgba(20,20,20,0.85);
     color: rgb(220,220,220);
