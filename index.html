@@ -10,9 +10,10 @@
     <link rel="shortcut icon" href="images/bulb.ico">
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/resetbootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/resetbootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">
@@ -67,7 +68,7 @@
                         <a href="http://gogatsusai.jp/88/visitor/" target="_blank"><p>五月祭公式サイト</p></a>
                     </div>
                 </div>
-                <div id="top-content" class="col-xs-12 hidden-sm hidden-md hidden-lg border-box" style="margin-top: 25px">
+                <div class="top-content col-xs-12 hidden-sm hidden-md hidden-lg border-box" style="margin-top: 25px">
                     <img src="./images/test_mod_mob.png" alt="test">
                 </div>
                 <div class="col-xs-12 hidden-sm hidden-md hidden-lg vice-top border-box">
@@ -78,13 +79,13 @@
                         <a href="http://gogatsusai.jp/88/visitor/" target="_blank"><p>五月祭公式サイト</p></a>
                     </div>
                 </div>
-                <div id="top-content" class="hidden-xs col-sm-8 col-md-9">
+                <div class="top-content col-sm-8 col-md-9">
                     <img src="./images/test_mod.png" alt="test">
                 </div>
                 <div class="col-xs-12 col-sm-12 vice-top border-box">
                     <!--<img src="./images/title_index_map.png" class="mini-title responsive-image" alt="工学部二号館案内マップ">-->
                     <h2>工学部二号館案内マップ</h2>
-                    <p class="normal">工学部２号館への行き方は<a href="access.html">「アクセス」</a>ページを御覧ください。（現在昨年度のマップとなっております。）</p>
+                    <p class="normal">工学部２号館への行き方は<a href="access.html">「アクセス」</a>ページを御覧ください。</p>
                     <a href="./images/map.png" target="_blank"><img src="./images/map.png" class="responsive-map normal" alt="工学部２号館案内マップ" height="200"></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 vice-top border-box">
@@ -96,7 +97,9 @@
                 <div class="col-xs-12 col-sm-12 vice-top border-box">
                     <!--<img src="./images/supporting_company.png" class="mini-title responsive-image" alt="協賛企業">-->
                     <h2>協賛企業</h2>
-                    <p class="normal">under construction</p>
+                    <ul>
+                        <li><a href="http://unipro.co.jp/">株式会社ユニプロ</a></li>
+                    </ul>
                 </div>
                 <div class="col-xs-12 col-sm-12 vice-top border-box">
                     <!--<img src="./images/donation.png" class="mini-title responsive-image" alt="寄付">-->
@@ -136,7 +139,12 @@
                 <div class="col-xs-12 col-sm-12 vice-top border-box">
                     <!--<img src="./images/cooperativebody.png" class="mini-title responsive-image" alt="協力団体">-->
                     <h2>協力団体</h2>
-                    <p class="normal">under construction</p>
+                    <p class="cooperative">東京大学工学部機械工学科・機械情報工学科</p>
+                    <p class="cooperative">同人サークルノンリニア</p>
+                    <p class="cooperative">東京大学工学部機械工学科・機械情報工学科</p>
+                    <p class="cooperative">同人サークルノンリニア</p>
+                    <p class="cooperative">東大マイコンクラブ</p>
+                    <p class="cooperative">東京大学ゲーム研究会</p>
                 </div>
                 <div class="container">
                     <div class="col-xs-12 col-sm-6 hidden-md hidden-lg vice-top">
@@ -174,8 +182,16 @@
     </footer>
     <script src="./js/jquery-1.11.2.min.js"></script>
     <script src="./js/mobile_pjs.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="./js/settings.js"></script>
     <script src="./js/processing.min.js"></script>
     <script type="text/javascript" src="./js/excanvas.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.top-content').slick({
+
+            });
+        });
+    </script>
 </body>
 </html>
