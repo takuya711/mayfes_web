@@ -44,3 +44,8 @@ Temporary Items
 
 # vim
 *.swp
+
+#visual studio
+*.suo
+*.sln
+*.publishproj
