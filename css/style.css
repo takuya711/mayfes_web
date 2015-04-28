@@ -258,7 +258,7 @@ a.cooperative {
 }
 
 .lablist {
-    padding: 5% 5% 1% 5%;
+    padding: 5% 5% 5% 5%;
     margin: 2% 2% 4.5% 2%;
     color: rgba(220,220,220,0.9);
     /*    font-size: 80%;*/
@@ -266,6 +266,10 @@ a.cooperative {
 
     .lablist img {
         width: 100%;
+    }
+    .lablist p{
+        display: none;
+        font-size: 10pt;
     }
 
 .gray {
