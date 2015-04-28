@@ -204,6 +204,10 @@ p.cooperative {
     margin-left: 30px;
 }
 
+a.cooperative {
+    margin-left: 30px;
+}
+
 .info {
     padding: 0 5% 3% 5%;
     font-weight: bold;
