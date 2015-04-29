@@ -209,7 +209,7 @@ a.cooperative {
 }
 
 .info {
-    padding: 0 5% 3% 5%;
+    padding: 0 5% 1% 5%;
     font-weight: bold;
 }
 
@@ -262,6 +262,17 @@ a.cooperative {
     margin: 2% 2% 4.5% 2%;
     color: rgba(220,220,220,0.9);
     /*    font-size: 80%;*/
+}
+
+.diy {
+    padding: 4%;
+    margin: 2% 2% 4.5% 2%;
+    color: rgba(220,220,220,0.9);
+    /*    font-size: 80%;*/
+}
+
+.diy img{
+    width: 100%;
 }
 
     .lablist img {
