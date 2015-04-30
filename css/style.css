@@ -100,8 +100,6 @@
     margin: 5px 15px 5px 10px;
 }
 
-    .nonactive-mobile-left img, .nonactive-mobile-right img, .active-mobile-left img, .active-mobile-right img {
-    }
 /*footer*/
 #footer_normal {
     background-color: rgba(0,100,0, 0.60);
@@ -137,12 +135,6 @@ body #wrapper { /*for canvas*/
 *:focus {
     outline: none;
 }
-
-
-#contents {
-/*    min-height: 100%;*/
-}
-
 
 /*index settings*/
 #mayfes-date {
