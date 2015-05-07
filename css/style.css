@@ -310,3 +310,10 @@ body {
     position: relative;
     background-color: #000;
 }
+
+.ar{
+    margin-bottom: 20px;
+}
+.ar img{
+    width: 98%;
+}
