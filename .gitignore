@@ -46,7 +46,6 @@ Temporary Items
 *.swp
 
 #visual studio
-*.suo
 *.sln
 *.publishproj
 *.suo
