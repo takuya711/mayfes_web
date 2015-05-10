@@ -14,7 +14,7 @@ void setup() {
 	size(innerWidth, innerHeight);
 	graphPaper();
 	makeTower();
-	frameRate(5);
+	frameRate(4);
 	waveNum1=waveNum2=0;
 }
 
