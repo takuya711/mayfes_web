@@ -28,10 +28,11 @@
     font-size: small;
 }
 
-.table div{
-    padding: 1px 5px 1px 5px;
-}
-.place div{
+    .table div {
+        padding: 1px 5px 1px 5px;
+    }
+
+.place div {
     padding-top: 10px;
     color: #0094ff;
 }
@@ -277,6 +278,11 @@ a.cooperative {
     /*    font-size: 80%;*/
 }
 
+.agic {
+    padding: 4%;
+    margin: 2% 2% 4.5% 2%;
+}
+
 .diy {
     padding: 4%;
     margin: 2% 2% 4.5% 2%;
@@ -289,6 +295,10 @@ a.cooperative {
     }
 
 .lablist img {
+    width: 100%;
+}
+
+.agic img {
     width: 100%;
 }
 
