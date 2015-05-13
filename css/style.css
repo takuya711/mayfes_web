@@ -24,6 +24,26 @@
     float: left;
 }
 
+.table {
+    font-size: small;
+}
+
+.table div{
+    padding: 1px 5px 1px 5px;
+}
+.place div{
+    padding-top: 10px;
+    color: #0094ff;
+}
+
+.tabletitle {
+    color: #999999;
+}
+
+.place {
+    font-weight: 900;
+}
+
 #panel {
     width: 506px;
     height: 120px;
@@ -107,7 +127,7 @@
     width: 100%;
     height: 22px;
     bottom: 0;
-    padding-right:30px;
+    padding-right: 30px;
     text-align: right;
     position: fixed;
     z-index: 5;
@@ -264,17 +284,18 @@ a.cooperative {
     /*    font-size: 80%;*/
 }
 
-.diy img{
+    .diy img {
+        width: 100%;
+    }
+
+.lablist img {
     width: 100%;
 }
 
-    .lablist img {
-        width: 100%;
-    }
-    .lablist p{
-        display: none;
-        font-size: 10pt;
-    }
+.lablist p {
+    display: none;
+    font-size: 10pt;
+}
 
 .gray {
     background-color: rgba(50,50,50,1);
@@ -312,9 +333,10 @@ body {
     background-color: #000;
 }
 
-.ar{
+.ar {
     margin-bottom: 20px;
 }
-.ar img{
-    width: 98%;
-}
+
+    .ar img {
+        width: 98%;
+    }
