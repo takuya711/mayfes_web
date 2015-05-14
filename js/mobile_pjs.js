@@ -1,6 +1,7 @@
 $(function () {
     if (getDevice=='sp' || getDevice=='tab'){
-        document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/randomwave.pjs"></canvas>';
+        document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/randomwave.pjs"></canvas>'; //change processing if mobile
+        $("iframe").remove(); //remove facebook if mobile
     }
 });
 
