@@ -3,6 +3,9 @@ $(function () {
         document.getElementById('wrapper').innerHTML = '<canvas data-src="./processing/randomwave.pjs"></canvas>'; //change processing if mobile
         $("iframe").remove(); //remove facebook if mobile
     }
+    else {
+        $(".mobile-app").remove(); //remove mobile-app if not mobile
+    }
 });
 
 var getDevice = (function(){
